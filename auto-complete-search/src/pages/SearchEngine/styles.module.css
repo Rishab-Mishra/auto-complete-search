@@ -1,9 +1,11 @@
 .searchInput {
-    width: 500px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 16px;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 .searchBox{
     position: relative;
@@ -46,4 +48,48 @@
 }
 .searchImg {
     width: 36px;
+}
+.inputContainer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* .searchInput { */
+  /* position: relative;
+  z-index: 1;
+  background: transparent;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px; */
+/* } */
+
+.autoCompleteOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  padding: 8px 12px; /* Match your input padding */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid transparent;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
+
+.typedText {
+  color: transparent; /* Hide the already typed part */
+}
+
+.suggestedText {
+  color: #007bff; /* Blue color for the suggestion */
+  background: rgba(0, 123, 255, 0.1); /* Light blue background */
+  padding: 0 2px;
+  border-radius: 2px;
 }
